@@ -1,0 +1,229 @@
+
+
+
+body{
+	width:100%;
+	margin: auto;
+}
+#first_screen{
+	overflow: hidden;
+  /*background: url('../img/1.png');*/
+  height: 568px;
+  background-size: cover;
+  background-position: 100%;
+}
+img{
+	width:100%;
+	height:auto;
+}
+
+.searched-items {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 83%;
+    height: 50%;
+    overflow: scroll;
+    display: inline-block;
+}
+.second_searched-items {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 83%;
+    height: 50%;
+    overflow: scroll;
+    display: inline-block;
+}
+.aftersearhform {  
+    padding-top: 12em;
+    overflow: scroll;
+    display: inline;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #333333;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #333333;
+}
+.search {       
+    height: 38px;
+    opacity: 0.1;
+    border: 1px solid;
+    border-color: transparent;
+    margin-left: -19px;
+    width: 85%;
+    margin-top: 22em;
+}
+.main {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+   /* position: fixed;*/
+    width: 100%;
+}
+.form {
+   
+    padding-top: 14em;
+  /*  position: absolute;*/
+  margin-left: 8%; 
+    text-align: center;
+    width: 90%;
+}
+
+form p{
+	color:red;
+}
+
+.container {
+    background-image: url("../img/screen.png");
+    /*background-position: 100% 50%;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 640px;
+    margin-left: 2%;
+   /* position: relative;*/
+    text-align: center;
+    width: 90%;
+}
+.form input {
+    height: 38px;
+    margin-top: 5%;
+    width: 80%;
+}
+.fullname {
+     margin-top: -1em !important;
+}
+input[type="password"], input[type="text"], input[type="email"]{
+	 font-size: 17px;
+	 opacity: 0.5;
+	 box-shadow: inset 0 0 0 rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+     }
+
+input[type="button"] {
+    background-color: red;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bolder;
+    opacity: 0.51;
+    box-shadow: inset 0 0 0 rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+    border: 1px solid;
+    border-color: transparent;
+
+}
+.para p{
+	font-size: 19px;
+    color:#fff;
+	margin-bottom: 2%;
+	width:80%;
+	margin: auto;
+}
+.radius{
+	border-radius: 100%;
+	margin-top: 0 !important;
+}
+.videolist:first-child {
+    margin-top: -25%;
+}
+   
+    
+   
+/************media queries***********/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.form {
+    padding-top: 19em;
+ }
+ 
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+.form {
+    padding-top: 19em;
+    margin-left: 8%;
+}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+.form {
+    padding-top: 13em;
+    margin-left: 5%;
+}
+.container {
+    margin-left: 4%;
+}
+}
+@media only screen and (min-device-width : 480px) and (max-width : 568px) and (orientation : landscape){
+.container {
+     background-position: 100% 16%;
+    margin-left: 5%;  
+  }
+.form {
+    padding-top: 10em;
+    margin-left: 5%;
+  }
+}
+@media only screen and (min-device-width : 569px) and (max-width : 667px) and (orientation : landscape){
+.container {
+     background-position: 100% 16%;
+    margin-left: 5%;  
+  }
+.form {
+    padding-top: 12em;
+    margin-left: 5%;
+  }
+}  
+@media only screen and (min-device-width : 668px) and (max-width : 736px) and (orientation : landscape){
+.container {
+     background-position: 100% 16%;
+    margin-left: 5%;  
+  }
+  .form {
+    padding-top: 13em;
+    margin-left: 5%;
+  } 
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+.form {
+    padding-top: 27em;
+    position: relative;
+    margin-left: 5%;
+}
+.container {
+    margin-left: 5%;
+}
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .container {
+
+    background-position: 33% 9%;
+  }
+  .main {
+    background-position: top;    
+  }
+  input[type="text"], input[type="email"] {
+    font-size: 20px;
+  }
+  .form input {
+    height: 3em;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@mediaonly screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

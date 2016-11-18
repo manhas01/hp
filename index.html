@@ -1,262 +1,60 @@
 <!DOCTYPE html>
-<!--
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
--->
-<html style="height:100%">
-<head>
-<title>Bahuka</title>
-
-<!--
-Customize this policy to fit your own app's needs. For more guidance, see:
-https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-Some notes:
-* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-    * Enable inline JS: add 'unsafe-inline' to default-src
--->
-
-<link rel="stylesheet" type="text/css" href="css/index.css">
- <link rel="stylesheet" type="text/css" href="css/style.css">
-<script type="text/javascript" src="js/jquer_libs.js"></script>
-
-<script type="text/javascript" src="js/index.js"></script>
-
- <script type="text/javascript" src="cordova.js"></script>
-    
-<script src="//js.pusher.com/3.2/pusher.min.js"></script>
-
-
-<!-- <script>
-var pushNotification;
-
-            function onDeviceReady() {
-               var  userid = localStorage.getItem('regid');
-               alert(userid);
-                try 
-                { 
-
-                	var phoneModel = window.device.model;
-                    pushNotification = window.plugins.pushNotification;
-              //$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
-              alert('Registering ' + device.platform);
-                    if(device.platform == 'android' || device.platform == 'Android' ||device.platform == 'amazon-fireos' ) {
-                        pushNotification.register(
-                        successHandler, 
-                        errorHandler, 
-                        {
-                            "senderID":"837440628665",
-                            "ecb":"window.onNotification"
-                        });     // required!
-
-                        alert('Registered the Android device');
-//alert('regID = ' + e.regid);
-                    } else {
-                        pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});    // required!
-                        alert('Registered the iOS device');
-                    }
-                }
-                catch(err) 
-                { 
-                    txt="There was an error on this page.\n\n"; 
-                    txt+="Error description: " + err.message + "\n\n"; 
-                    //alert(txt); 
-
-                    alert("Error: Status="+err.status+" Message="+err.message+" service="+service+" action="+action);
-                    alert('Error: ' + err.message);
-                } 
+<html>
+    <head>
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/background.cycle.js"></script>
+        <title>Wild</title>
+        <script>
+            if(localStorage.userid != undefined && localStorage.userid != null && localStorage.userid != "") {
+                window.location.href="search.html";
             }
+        </script>
+         <script type="text/javascript">
+            $(document).ready(function() {
+                $("body").backgroundCycle({
+                    imageUrls: [
+                        'img/1.png',
+                        'img/slide1.png',
+                        'img/slide2.png',
+                        'img/slide3.png',
+                        'img/slide4.png',
+                        'img/slide5.png'
+                    ],
+                    fadeSpeed: 2000,
+                    duration: 6000,
+                    backgroundSize: SCALING_MODE_COVER
+                });
+            });
+        </script>
+    </head>
+    <body onload="setHeight()" style="margin: 0;">
+    <div id="first_screen" onclick="gotoregisterpage();">
+         <script type="text/javascript">
 
-            // handle APNS notifications for iOS
-            function onNotificationAPN(e) {
-                if(e.alert) {
-                     //$("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
-                     //alert('push-notification: ' + e.alert);
-                     // showing an alert also requires the org.apache.cordova.dialogs plugin
-                     navigator.notification.alert(e.alert);
-                }
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36251023-1']);
+          _gaq.push(['_setDomainName', 'jqueryscript.net']);
+          _gaq.push(['_trackPageview']);
 
-                if(e.sound) {
-                    // playing a sound also requires the org.apache.cordova.media plugin
-                    var snd = new Media(e.sound);
-                    snd.play();
-                }
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
 
-                if(e.badge) {
-                    pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
-                }
-            }
-
-            // handle GCM notifications for Android
-          window.onNotification=function(e) { 
-alert("hii");
-            	alert(e.regid);
-                //$("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
-                alert('EVENT -> RECEIVED:' + e.event);
-
-                switch( e.event )
-                {
-                    case 'registered':
-                    if( e.regid.length > 0 )
-                    {
-                    	
-  
-          /*  {
-                "message": "Hello this is a push notification",
-                "payload": {
-                "message": "Hello this is a push notification",
-                "sound": "notification",
-                "title": "New Message",
-                "from": "837440628665",
-                "collapse_key": "do_not_collapse",
-                "foreground": true,
-                "event": "message"
-                }
-            }*/
-          
-
-
-                    	localStorage.setItem('regid',e.regid);
-                        //$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
-                        // Your GCM push server needs to know the regID before it can push to this device
-                        // here is where you might want to send it the regID for later use.
-                        console.log("regID = " + e.regid);
-                        alert(' REGID = ' + e.regid);
-                    }
-                    break;
-
-                    case 'message':
-                        // if this flag is set, this notification happened while we were in the foreground.
-                        // you might want to play a sound to get the user's attention, throw up a dialog, etc.
-                        if(e.foreground)
-                        {
-                            //$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
-                            alert('--INLINE NOTIFICATION--');
-
-                                // on Android soundname is outside the payload. 
-                                    // On Amazon FireOS all custom attributes are contained within payload
-                                    var soundfile = e.soundname || e.payload.sound;
-                                    // if the notification contains a soundname, play it.
-                                    // playing a sound also requires the org.apache.cordova.media plugin
-                                    var my_media = new Media("/android_asset/www/"+ soundfile);
-                            my_media.play();
-                        }
-                        else
-                        {   // otherwise we were launched because the user touched a notification in the notification tray.
-                            if(e.coldstart)
-                                //$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
-                                alert('--COLDSTART NOTIFICATION--')
-                            else
-                            //$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
-                                alert('--BACKGROUND NOTIFICATION--')
-                        }
-
-                        //$("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
-                        alert('MESSAGE -> MSG: ' + e.payload.message);
-                        //android only
-                        //$("#app-status-ul").append('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
-                        alert('MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
-                        //amazon-fireos only
-                        //$("#app-status-ul").append('<li>MESSAGE -> TIMESTAMP: ' + e.payload.timeStamp + '</li>');
-                        alert('MESSAGE -> TIMESTAMP: ' + e.payload.timeStamp);
-                    break;
-
-                    case 'error':
-                        //$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
-                        alert('ERROR -> MSG' + e.msg);
-                    break;
-
-                    default:
-                        //$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
-                        alert('EVENT -> Unknown, an event was received and we do not know what it is');
-                    break;
-                }
-            }
-
-            function tokenHandler (result) {
-                //$("#app-status-ul").append('<li>token: '+ result +'</li>');
-                // Your iOS push server needs to know the token before it can push to this device
-                // here is where you might want to send it the token for later use.
-                alert('iOS Result = ' + result);
-            }
-
-            function successHandler (result) {
-                //$("#app-status-ul").append('<li>success:'+ result +'</li>');
-                alert('Android Result = ' + result);
-                alert('RegID = ' + e.regid);
-            }
-
-            function errorHandler (error) {
-                //$("#app-status-ul").append('<li>error:'+ error +'</li>');
-                alert('Error = ' +   error);
-
-            }
-
-            document.addEventListener('deviceready', onDeviceReady, true);
-
-alert('regID = ' + e.regid);            
-alert('Reg code completed');
-
-
-</script> -->
-
-
-
-
-
-
-
-
-<title>Hello World</title>
-</head>
-
-
-<body>
-
-<div  id="bahuka" class="bahuka_main">
-
-<div class="images">
-<img id="bahuka_logo" src="img/MP0Xs0L (1).png" />
-</div>
-<p class="titletext1">Find the Right Teacher For You.</p>
-<div class="images">
-<img src="img/MP0Xs0L.png" />
-</div>
-
-<div class="radio_div"> 
-<input type="radio" name="classif" id="C1" value="true"   hidden  checked />
-<label class="ds" onclick="changetoabout('C1');" for="C1"> </label>
-
-
-<input type="radio" name="classif" id="C2" value="true" hidden />
-<label class="ds" onclick="changetoabout('C2');" for="C2">   </label>
-<input   type="radio" name="classif" id="C3" value="true"   hidden />
-<label class="ds" onclick="changetoabout('C3');" for="C3"> </label>
-<input type="radio" name="classif" id="C4" value="true" hidden />
-<label class="ds" onclick="changetoabout('C4');" for="C4">   </label>
-</div>
-<div class="foorter_menu">
-<p class="leftmenu lr"><a style="color:#fff" href="login.html">login</a></p>
-<p  class="rightmenu lr"><a  style="color:#fff" href="signup1.html">Get started</a></p>
-</div>
-</div>
-
-</body>
-
+        </script>       
+    </div>
+        <!--img src="img/1.png" alt="first_screen" onclick="gotoregisterpage();"/-->        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+    </body>
 </html>
-
