@@ -32,6 +32,7 @@ img{
     height: 50%;
     overflow: scroll;
     display: inline-block;
+    color: #fff;
 }
 .aftersearhform {  
     padding-top: 12em;
@@ -124,7 +125,10 @@ input[type="button"] {
 .videolist:first-child {
     margin-top: -25%;
 }
-   
+#first_screen .cycle-bg-image {
+    background-position: 100% center;
+    background-size: cover;
+}
     
    
 /************media queries***********/
@@ -133,7 +137,6 @@ input[type="button"] {
 .form {
     padding-top: 19em;
  }
- 
 }
 
 /* Smartphones (landscape) ----------- */
@@ -227,3 +230,283 @@ input[type="button"] {
 @mediaonly screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
+
+
+@media only screen and (min-device-width : 414px) and (max-device-height : 736px){
+  .search {       
+    margin-top: 15em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -10%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+
+@media only screen and (min-device-width : 412px) and (max-device-height : 732px){
+ .search {       
+    margin-top: 15em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -10%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+
+@media only screen and (min-device-width : 375px) and (max-device-height : 667px) {
+  .search {       
+    margin-top: 14em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -20%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+@media only screen and (min-device-width : 360px) and (max-device-height : 640px) {
+ .search {       
+    margin-top: 12em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -21%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-height : 568px) {
+
+  .search {       
+    margin-top: 12em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-height : 533px) {
+ .search {       
+    margin-top: 11em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-height : 480px){
+.search {       
+    margin-top: 8em;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+   overflow: auto; 
+   margin-top: 3%;
+       height: auto;
+
+}
+}
+@media only screen and (min-device-height : 320px) and (orientation : landscape){
+  .form input {
+      margin-top: 3%;
+  }
+  .form {
+      padding-top: 7.5em;
+  }
+
+}
+
+@media only screen and (min-device-width : 414px) and (max-device-height : 736px) and (orientation : landscape){
+/*  .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+  .search {       
+    margin-top: 15em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -10%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+}
+}
+
+@media only screen and (min-device-width : 412px) and (max-device-height : 732px) and (orientation : landscape){
+/* .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+ .search {       
+    margin-top: 15em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -10%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+
+@media only screen and (min-device-width : 375px) and (max-device-height : 667px) and (orientation : landscape){
+ /* .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+  .search {       
+    margin-top: 14em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -20%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+@media only screen and (min-device-width : 360px) and (max-device-height : 640px) and (orientation : landscape){
+/*  .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+ .search {       
+    margin-top: 12em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -21%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+@media only screen and (min-device-width : 320px) and (max-device-height : 568px) and (orientation : landscape){
+ /*  .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+  .search {       
+    margin-top: 12em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-height : 533px) and (orientation : landscape){
+/*   .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+ .search {       
+    margin-top: 11em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-height : 480px)and (orientation : landscape){
+/*   .search_main{height: 100vh !important; }
+  .search_container{height: 100vh !important;}*/
+.search {       
+    margin-top: 8em;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+   overflow: auto; 
+   margin-top: 3%;
+       height: auto;
+
+}
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation : portrait){
+  .search_main{ height: 100vh !important; }
+  .search_container{height: 100vh !important;}
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation : landscape){
+  .search_main{ height: 100vh !important; }
+  .search_container{height: 100vh !important;}
+}
+

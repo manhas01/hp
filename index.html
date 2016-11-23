@@ -3,8 +3,6 @@
 <html>
     <head>
         
-
-        
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
@@ -22,7 +20,7 @@
         </script>
          <script type="text/javascript">
             $(document).ready(function() {
-                $("body").backgroundCycle({
+                $("#first_screen").backgroundCycle({
                     imageUrls: [
                         'img/1.png',
                         'img/slide1.png',
@@ -36,9 +34,15 @@
                     backgroundSize: SCALING_MODE_COVER
                 });
             });
+
+            $( window ).on( "orientationchange", function( event ) {
+             //alert("changed");
+             window.location.reload();
+            });
+
         </script>
     </head>
-    <body onload="setHeight()" style="margin: 0;">
+    <body onload="setHeight();"  style="margin: 0;">
     <div id="first_screen" onclick="gotoregisterpage();">
          <script type="text/javascript">
 

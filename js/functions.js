@@ -168,5 +168,7 @@ function gotoregisterpage() {
 	$('#first_screen').css('height', windowHeight);
 	$('.main').css('height', windowHeight);
 	$('.container').css('height', windowHeight);
-  
+
  };
+
+
