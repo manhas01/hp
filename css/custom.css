@@ -2,19 +2,19 @@
 
 
 body{
-	width:100%;
-	margin: auto;
+  width:100%;
+  margin: auto;
 }
 #first_screen{
-	overflow: hidden;
+  overflow: hidden;
   /*background: url('../img/1.png');*/
   height: 568px;
   background-size: cover;
   background-position: 100%;
 }
 img{
-	width:100%;
-	height:auto;
+  width:100%;
+  height:auto;
 }
 
 .searched-items {
@@ -72,7 +72,7 @@ img{
 }
 
 form p{
-	color:red;
+  color:red;
 }
 
 .container {
@@ -95,9 +95,9 @@ form p{
      margin-top: -1em !important;
 }
 input[type="password"], input[type="text"], input[type="email"]{
-	 font-size: 17px;
-	 opacity: 0.5;
-	 box-shadow: inset 0 0 0 rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+   font-size: 17px;
+   opacity: 0.5;
+   box-shadow: inset 0 0 0 rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
      }
 
 input[type="button"] {
@@ -112,15 +112,15 @@ input[type="button"] {
 
 }
 .para p{
-	font-size: 19px;
+  font-size: 19px;
     color:#fff;
-	margin-bottom: 2%;
-	width:80%;
-	margin: auto;
+  margin-bottom: 2%;
+  width:80%;
+  margin: auto;
 }
 .radius{
-	border-radius: 100%;
-	margin-top: 0 !important;
+  border-radius: 100%;
+  margin-top: 0 !important;
 }
 .videolist:first-child {
     margin-top: -25%;
@@ -303,7 +303,24 @@ input[type="button"] {
     margin-left: 5%;
 }
 }
+@media only screen and (min-device-width : 320px) and (max-device-height : 570px) {
 
+  .search {       
+    margin-top: 12em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -34%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
 @media only screen and (min-device-width : 320px) and (max-device-height : 568px) {
 
   .search {       
@@ -434,6 +451,24 @@ input[type="button"] {
 }
 .videolist:first-child {
     margin-top: -21%;
+}
+.searched-items {
+    margin: auto;
+    overflow: auto; 
+    margin-top: 3%;
+    height: auto;
+    margin-left: 5%;
+
+}
+}
+@media only screen and (min-device-width : 320px) and (max-device-height : 570px) and (orientation : landscape){
+
+  .search {       
+    margin-top: 12em;
+    margin-left: 0px;
+}
+.videolist:first-child {
+    margin-top: -34%;
 }
 .searched-items {
     margin: auto;
