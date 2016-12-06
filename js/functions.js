@@ -11,7 +11,7 @@
 
 	jQuery.ajax({
 		type: "POST",
-		url: "http://movieidea.reviews/wildfunc.php",
+		url: "http://wildapp.info/wildfunc.php",
 		data: formData,
 		dataType: "json",
 		success: function(response) {
@@ -59,7 +59,7 @@
 
 	jQuery.ajax({
 		type: "POST",
-		url: "http://movieidea.reviews/wildfunc.php",
+		url: "http://wildapp.info/wildfunc.php",
 		data: formData,
 		dataType: "json",
 		success: function(response) {
@@ -135,7 +135,7 @@
 
 	jQuery.ajax({
 		type: "POST",
-		url: "http://movieidea.reviews/wildfunc.php",
+		url: "http://wildapp.info/wildfunc.php",
 		data: formData,
 		dataType: "json",
 		success: function(response) {
