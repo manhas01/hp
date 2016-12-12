@@ -309,9 +309,9 @@ input[type="button"] {
     margin-top: 12em;
     margin-left: 0px;
 }
-.videolist video {
-    margin-top: -100%;
-}
+.videolist:first-child {
+    margin-top: -34%;
+  }
 .searched-items {
     margin: auto;
     overflow: auto; 
