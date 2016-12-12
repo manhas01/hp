@@ -83,6 +83,7 @@ form p{
     height: 640px;
     margin-left: 2%;
    /* position: relative;*/
+   overflow:auto;
     text-align: center;
     width: 90%;
 }
@@ -311,7 +312,11 @@ input[type="button"] {
 }
 .videolist:first-child {
     margin-top: -34%;
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> fd01c60b6fd9ec295d0c675ba3c76f0f11e81a2b
 .searched-items {
     margin: auto;
     overflow: auto; 
