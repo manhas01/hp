@@ -142,7 +142,7 @@
 			console.log(JSON.stringify(response));
 			
 			if(response.status == "success") {
-				//alert(response.status);	
+			
 				window.location.href="search.html";
 				localStorage.userid = response.userid;
 			}

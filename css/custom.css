@@ -309,7 +309,7 @@ input[type="button"] {
     margin-top: 12em;
     margin-left: 0px;
 }
-.videolist:first-child {
+.videolist video {
     margin-top: -34%;
 }
 .searched-items {
